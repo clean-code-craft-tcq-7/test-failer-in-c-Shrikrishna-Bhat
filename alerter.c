@@ -12,7 +12,7 @@ int networkAlertStub(float celcius) {
     // Return 200 for ok
     // Return 500 for not-ok
     // stub always succeeds and returns 200
-    if(celcius > 500)
+    if(celcius > 500.0)
     {
         returnValue = 500;
     }
@@ -36,6 +36,8 @@ void alertInCelcius(float farenheit) {
         // However, this code doesn't count failures!
         // Add a test below to catch this bug. Alter the stub above, if needed.
         alertFailureCount += 0;
+        
+        printf("I am here 1000\n");
         
         assert(alertFailureCount == 0);
     }
