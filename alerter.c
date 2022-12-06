@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-#define Test_Code 1
+//#define Test_Code 1
 
 int alertFailureCount = 0;
 
@@ -15,7 +15,7 @@ int networkAlertStub(float celcius) {
 
 void alertInCelcius(float farenheit) {
     float celcius = (farenheit - 32) * 5 / 9;
-    #ifndef Test_Code
+    #ifdef Test_Code
     int returnCode = networkAlertStub(celcius);
     #endif
     if (returnCode != 200) {
