@@ -7,8 +7,6 @@ const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
 void testColorPair(int MjIndex, int MnIndex, const char * MjColor, const char * MnColor)
 {
     int checkIndex = 0;
-    //const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
-    //const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     assert(majorColor[MjIndex] == MjColor);
     assert(minorColor[MnIndex] == MnColor);
     checkIndex = (MjIndex * MnIndex) / 10;
@@ -16,8 +14,6 @@ void testColorPair(int MjIndex, int MnIndex, const char * MjColor, const char * 
 }
 
 int printColorMap() {  
-    //const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
-    //const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
