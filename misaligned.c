@@ -1,9 +1,17 @@
 #include <stdio.h>
 #include <assert.h>
 
+const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
+const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
+
+int testColorPair(Int MjIndex, int MnIndex, char *MjColor, char *MnColor)
+{
+    int checkIndex = 0;
+    checkIndex = (MjIndex * MnIndex) / 10;
+    assert(checkIndex == 1);
+}
+
 int printColorMap() {
-    const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
-    const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
