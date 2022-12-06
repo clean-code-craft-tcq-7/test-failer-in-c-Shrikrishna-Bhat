@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
 
+#define Test_Code 1
+
 int alertFailureCount = 0;
 
 int networkAlertStub(float celcius) {
@@ -13,7 +15,9 @@ int networkAlertStub(float celcius) {
 
 void alertInCelcius(float farenheit) {
     float celcius = (farenheit - 32) * 5 / 9;
+    #ifdef Test_Code
     int returnCode = networkAlertStub(celcius);
+    #endif
     if (returnCode != 200) {
         // non-ok response is not an error! Issues happen in life!
         // let us keep a count of failures to report
