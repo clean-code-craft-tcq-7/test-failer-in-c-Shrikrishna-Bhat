@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-int testColorPair(int MjIndex, int MnIndex, char *MjColor, char *MnColor)
+int testColorPair(int MjIndex, int MnIndex, const char * MjColor, const char * MnColor)
 {   
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
