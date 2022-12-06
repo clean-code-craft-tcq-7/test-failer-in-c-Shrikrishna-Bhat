@@ -1,17 +1,28 @@
 #include <stdio.h>
 #include <assert.h>
 
-//#define Test_Code 1
+#define Test_Code 1
 
 int alertFailureCount = 0;
 
+#ifdef Test_Code
 int networkAlertStub(float celcius) {
+    int returnValue = 0;
     printf("ALERT: Temperature is %.1f celcius.\n", celcius);
     // Return 200 for ok
     // Return 500 for not-ok
     // stub always succeeds and returns 200
-    return 200;
+    if(celcius > 500)
+    {
+        returnValue = 500
+    }
+    else
+    {
+        returnValue = 200
+    }
+    return returnValue;
 }
+#endif
 
 void alertInCelcius(float farenheit) {
     int returnCode = 0;
