@@ -14,11 +14,11 @@ int networkAlertStub(float celcius) {
     // stub always succeeds and returns 200
     if(celcius > 500)
     {
-        returnValue = 500
+        returnValue = 500;
     }
     else
     {
-        returnValue = 200
+        returnValue = 200;
     }
     return returnValue;
 }
