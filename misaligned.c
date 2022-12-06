@@ -2,10 +2,12 @@
 #include <assert.h>
 
 int testColorPair(int MjIndex, int MnIndex, const char * MjColor, const char * MnColor)
-{   
+{
+    int checkIndex = 0;
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
-    int checkIndex = 0;
+    assert(majorColor[MjIndex] == MjColor);
+    assert(minorColor[MnIndex] == MnColor);
     checkIndex = (MjIndex * MnIndex) / 10;
     assert(checkIndex == 1);
 }
